@@ -120,7 +120,7 @@ function zephyr.load_syntax()
     SpecialKey        = {fg=zephyr.bg1};
     Pmenu             = {fg=zephyr.fg,bg=zephyr.grey2};
     PmenuSel          = {fg=zephyr.base0,bg=zephyr.blue};
-    PmenuSelBold      = {fg=zephyr.base0,g=zephyr.blue};
+    PmenuSelBold      = {fg=zephyr.base0,bg=zephyr.blue};
     PmenuSbar         = {fg=zephyr.none,bg=zephyr.base4};
     PmenuThumb        = {fg=zephyr.violet,bg=zephyr.light_green};
     WildMenu          = {fg=zephyr.fg,bg=zephyr.green};
