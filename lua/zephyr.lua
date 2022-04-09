@@ -19,6 +19,7 @@ local zephyr = {
   bg_popup     = '#3E4556';
   bg_highlight = '#2E323C';
   bg_visual    = '#b3deef';
+  gray91 = '#E8E8E8';
 
   -- fg = '#bbc2cf';
   fg           = 'black';
@@ -97,7 +98,7 @@ function zephyr.load_syntax()
     lCursor           = {fg=zephyr.none,bg=zephyr.none,style='reverse'};
     CursorIM          = {fg=zephyr.none,bg=zephyr.none,style='reverse'};
     CursorColumn      = {fg=zephyr.none,bg=zephyr.bg_highlight};
-    CursorLine        = {fg=zephyr.none,bg=zephyr.bg_highlight};
+    CursorLine        = {fg=zephyr.none,bg=zephyr.gray91};
     LineNr            = {fg=zephyr.base4};
     qfLineNr          = {fg=zephyr.cyan};
     CursorLineNr      = {fg=zephyr.blue};
