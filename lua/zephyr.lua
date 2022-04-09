@@ -166,7 +166,7 @@ function zephyr.load_syntax()
     Type              = {fg=zephyr.MediumBlue};
     Function          = {fg=zephyr.black};
     String            = {fg=zephyr.Green4};
-    Character         = {fg=zephyr.green};
+    Character         = {fg=zephyr.black};
     Constant          = {fg=zephyr.cyan};
     Macro             = {fg=zephyr.cyan};
     Identifier        = {fg=zephyr.red4};
