@@ -26,6 +26,7 @@ local zephyr = {
   fg_alt       = '#5B6268';
 
   red          = '#e95678';
+  red2         = '#FF0000';
   red4         = '#8B0000';
 
   redwine      = '#d16d9e';
@@ -38,10 +39,12 @@ local zephyr = {
 
   cyan         = '#36d0e0';
   blue         = '#61afef';
+  MediumBlue   = '#0000CD';
   violet       = '#b294bb';
   magenta      = '#c678dd',
   teal         = '#1abc9c';
   grey         = '#928374';
+  grey2        = '#BEBEBE';
   brown        = '#c78665';
   black        = '#000000';
 
@@ -114,7 +117,7 @@ function zephyr.load_syntax()
     NonText           = {fg=zephyr.bg1};
     Whitespace        = {fg=zephyr.base4};
     SpecialKey        = {fg=zephyr.bg1};
-    Pmenu             = {fg=zephyr.fg,bg=zephyr.bg_popup};
+    Pmenu             = {fg=zephyr.fg,bg=zephyr.grey2};
     PmenuSel          = {fg=zephyr.base0,bg=zephyr.blue};
     PmenuSelBold      = {fg=zephyr.base0,g=zephyr.blue};
     PmenuSbar         = {fg=zephyr.none,bg=zephyr.base4};
@@ -138,28 +141,28 @@ function zephyr.load_syntax()
     debugBreakpoint   = {fg=zephyr.bg,bg=zephyr.red};
 
     Boolean           = {fg=zephyr.orange};
-    Number            = {fg=zephyr.brown};
+    Number            = {fg=zephyr.red2};
     Float             = {fg=zephyr.brown};
-    PreProc           = {fg=zephyr.violet};
-    PreCondit         = {fg=zephyr.violet};
-    Include           = {fg=zephyr.violet};
-    Define            = {fg=zephyr.violet};
-    Conditional       = {fg=zephyr.magenta};
-    Repeat            = {fg=zephyr.magenta};
-    Keyword           = {fg=zephyr.green};
-    Typedef           = {fg=zephyr.red};
-    Exception         = {fg=zephyr.red};
+    PreProc           = {fg=zephyr.MediumBlue};
+    PreCondit         = {fg=zephyr.MediumBlue};
+    Include           = {fg=zephyr.MediumBlue};
+    Define            = {fg=zephyr.MediumBlue};
+    Conditional       = {fg=zephyr.MediumBlue};
+    Repeat            = {fg=zephyr.MediumBlue};
+    Keyword           = {fg=zephyr.MediumBlue};
+    Typedef           = {fg=zephyr.MediumBlue};
+    Exception         = {fg=zephyr.MediumBlue};
     Statement         = {fg=zephyr.red};
-    Error             = {fg=zephyr.red};
-    StorageClass      = {fg=zephyr.orange};
+    Error             = {fg=zephyr.red2};
+    StorageClass      = {fg=zephyr.MediumBlue};
     Tag               = {fg=zephyr.orange};
-    Label             = {fg=zephyr.orange};
-    Structure         = {fg=zephyr.orange};
-    Operator          = {fg=zephyr.redwine};
+    Label             = {fg=zephyr.MediumBlue};
+    Structure         = {fg=zephyr.black};
+    Operator          = {fg=zephyr.red4};
     Title             = {fg=zephyr.orange,style='bold'};
     Special           = {fg=zephyr.yellow};
     SpecialChar       = {fg=zephyr.yellow};
-    Type              = {fg=zephyr.teal};
+    Type              = {fg=zephyr.MediumBlue};
     Function          = {fg=zephyr.black};
     String            = {fg=zephyr.dark_green};
     Character         = {fg=zephyr.green};
@@ -167,7 +170,7 @@ function zephyr.load_syntax()
     Macro             = {fg=zephyr.cyan};
     Identifier        = {fg=zephyr.red4};
 
-    Comment           = {fg=zephyr.base6};
+    Comment           = {fg=zephyr.grey2};
     SpecialComment    = {fg=zephyr.grey};
     Todo              = {fg=zephyr.violet};
     Delimiter         = {fg=zephyr.fg};
