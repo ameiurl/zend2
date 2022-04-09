@@ -19,7 +19,7 @@ local zephyr = {
   bg_popup     = '#3E4556';
   bg_highlight = '#2E323C';
   bg_visual    = '#b3deef';
-  gray91 = '#E8E8E8';
+  gray91       = '#E8E8E8';
 
   -- fg = '#bbc2cf';
   fg           = 'black';
@@ -35,7 +35,8 @@ local zephyr = {
 
   light_green  = '#abcf84';
   green        = '#afd700';
-  dark_green   = '#008B00';
+  dark_green   = '#98be65';
+  Green4       = '#008B00';
 
   cyan         = '#36d0e0';
   blue         = '#61afef';
@@ -54,16 +55,16 @@ local zephyr = {
 }
 
 function zephyr.terminal_color()
-  vim.g.terminal_color_0 = zephyr.bg
-  vim.g.terminal_color_1 = zephyr.red
-  vim.g.terminal_color_2 = zephyr.green
-  vim.g.terminal_color_3 = zephyr.yellow
-  vim.g.terminal_color_4 = zephyr.blue
-  vim.g.terminal_color_5 = zephyr.violet
-  vim.g.terminal_color_6 = zephyr.cyan
-  vim.g.terminal_color_7 = zephyr.bg1
-  vim.g.terminal_color_8 = zephyr.brown
-  vim.g.terminal_color_9 = zephyr.red
+  vim.g.terminal_color_0  = zephyr.bg
+  vim.g.terminal_color_1  = zephyr.red
+  vim.g.terminal_color_2  = zephyr.green
+  vim.g.terminal_color_3  = zephyr.yellow
+  vim.g.terminal_color_4  = zephyr.blue
+  vim.g.terminal_color_5  = zephyr.violet
+  vim.g.terminal_color_6  = zephyr.cyan
+  vim.g.terminal_color_7  = zephyr.bg1
+  vim.g.terminal_color_8  = zephyr.brown
+  vim.g.terminal_color_9  = zephyr.red
   vim.g.terminal_color_10 = zephyr.green
   vim.g.terminal_color_11 = zephyr.yellow
   vim.g.terminal_color_12 = zephyr.blue
@@ -140,9 +141,9 @@ function zephyr.load_syntax()
     Debug             = {fg=zephyr.orange};
     debugBreakpoint   = {fg=zephyr.bg,bg=zephyr.red};
 
-    Boolean           = {fg=zephyr.orange};
+    Boolean           = {fg=zephyr.red2};
     Number            = {fg=zephyr.red2};
-    Float             = {fg=zephyr.brown};
+    Float             = {fg=zephyr.red2};
     PreProc           = {fg=zephyr.MediumBlue};
     PreCondit         = {fg=zephyr.MediumBlue};
     Include           = {fg=zephyr.MediumBlue};
@@ -160,11 +161,11 @@ function zephyr.load_syntax()
     Structure         = {fg=zephyr.black};
     Operator          = {fg=zephyr.red4};
     Title             = {fg=zephyr.orange,style='bold'};
-    Special           = {fg=zephyr.yellow};
-    SpecialChar       = {fg=zephyr.yellow};
+    Special           = {fg=zephyr.black};
+    SpecialChar       = {fg=zephyr.black};
     Type              = {fg=zephyr.MediumBlue};
     Function          = {fg=zephyr.black};
-    String            = {fg=zephyr.dark_green};
+    String            = {fg=zephyr.Green4};
     Character         = {fg=zephyr.green};
     Constant          = {fg=zephyr.cyan};
     Macro             = {fg=zephyr.cyan};
@@ -290,27 +291,27 @@ end
 local async_load_plugin
 
 async_load_plugin = vim.loop.new_async(vim.schedule_wrap(function ()
-  zephyr.terminal_color()
-  local syntax = zephyr.load_plugin_syntax()
-  for group,colors in pairs(syntax) do
-    zephyr.highlight(group,colors)
-  end
-  async_load_plugin:close()
+    zephyr.terminal_color()
+    local syntax = zephyr.load_plugin_syntax()
+    for group,colors in pairs(syntax) do
+        zephyr.highlight(group,colors)
+    end
+    async_load_plugin:close()
 end))
 
 function zephyr.colorscheme()
-  vim.api.nvim_command('hi clear')
-  if vim.fn.exists('syntax_on') then
-    vim.api.nvim_command('syntax reset')
-  end
-  vim.o.background = 'light'
-  vim.o.termguicolors = true
-  vim.g.colors_name = 'zephyr'
-  local syntax = zephyr.load_syntax()
-  for group,colors in pairs(syntax) do
-    zephyr.highlight(group,colors)
-  end
-  async_load_plugin:send()
+    vim.api.nvim_command('hi clear')
+    if vim.fn.exists('syntax_on') then
+        vim.api.nvim_command('syntax reset')
+    end
+    vim.o.background = 'light'
+    vim.o.termguicolors = true
+    vim.g.colors_name = 'zephyr'
+    local syntax = zephyr.load_syntax()
+    for group,colors in pairs(syntax) do
+        zephyr.highlight(group,colors)
+    end
+    async_load_plugin:send()
 end
 
 zephyr.colorscheme()
