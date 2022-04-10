@@ -153,18 +153,18 @@ function zephyr.load_syntax()
     Keyword           = {fg=zephyr.MediumBlue};
     Typedef           = {fg=zephyr.MediumBlue};
     Exception         = {fg=zephyr.MediumBlue};
-    Statement         = {fg=zephyr.red};
+    Statement         = {fg=zephyr.black};
     Error             = {fg=zephyr.red2};
     StorageClass      = {fg=zephyr.MediumBlue};
     Tag               = {fg=zephyr.orange};
     Label             = {fg=zephyr.MediumBlue};
     Structure         = {fg=zephyr.black};
-    Operator          = {fg=zephyr.red4};
+    Operator          = {fg=zephyr.black};
     Title             = {fg=zephyr.orange,style='bold'};
     Special           = {fg=zephyr.black};
     SpecialChar       = {fg=zephyr.black};
     Type              = {fg=zephyr.MediumBlue};
-    Function          = {fg=zephyr.black};
+    Function          = {fg=zephyr.MediumBlue};
     String            = {fg=zephyr.Green4};
     Character         = {fg=zephyr.black};
     Constant          = {fg=zephyr.cyan};
@@ -284,6 +284,8 @@ function zephyr.load_plugin_syntax()
     TelescopeSelection                   = {fg=zephyr.yellow,bg=zephyr.bg_highlight,style= 'bold'};
     TelescopeSelectionCaret              = {fg=zephyr.yellow};
     TelescopeMultiSelection              = {fg=zephyr.teal};
+
+    phpVarSelector                       = {fg=zephyr.red4}
   }
   return plugin_syntax
 end
