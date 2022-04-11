@@ -289,6 +289,8 @@ function zephyr.load_plugin_syntax()
 
     htmlTag                              = {fg=zephyr.black};
     htmlEndTag                           = {fg=zephyr.black};
+
+    HighlightedyankRegion                = {fg=zephyr.black,bg=zephyr.yellow};
   }
   return plugin_syntax
 end
