@@ -57,7 +57,7 @@ local zephyr = {
 function zephyr.terminal_color()
   vim.g.terminal_color_0  = zephyr.bg
   vim.g.terminal_color_1  = zephyr.red
-  vim.g.terminal_color_2  = zephyr.green
+  vim.g.terminal_color_2  = zephyr.Green4
   vim.g.terminal_color_3  = zephyr.yellow
   vim.g.terminal_color_4  = zephyr.blue
   vim.g.terminal_color_5  = zephyr.violet
