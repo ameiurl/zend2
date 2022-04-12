@@ -290,6 +290,7 @@ function zephyr.load_plugin_syntax()
 
     htmlTag                              = {fg=zephyr.black};
     htmlEndTag                           = {fg=zephyr.black};
+    htmlLink                             = {fg=zephyr.orange};
 
     HighlightedyankRegion                = {fg=zephyr.black,bg=zephyr.yellow};
   }
