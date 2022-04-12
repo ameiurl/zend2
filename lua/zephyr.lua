@@ -286,6 +286,7 @@ function zephyr.load_plugin_syntax()
     TelescopeMultiSelection              = {fg=zephyr.teal};
 
     phpVarSelector                       = {fg=zephyr.red4};
+    phpStatement                         = {fg=zephyr.MediumBlue};
 
     htmlTag                              = {fg=zephyr.black};
     htmlEndTag                           = {fg=zephyr.black};
